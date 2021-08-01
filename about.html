@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="css1/style.css">
+</head>
+<body>
+    <div class="box-area" style="overflow: hidden;">
+    <header>
+                <div class="wrapper">
+                    <div class="logo">
+                        <a href="#" style="color: #1a1a1d;">The</a><a href="#" style="color: #950740;">Destination</a>
+                    </div>
+                    <nav>
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="services.html">Services</a>
+                        <a href="">Enquiry/Request</a>
+                        <a href="contactus.html">Contact</a>
+                        <a href="#" style="color: #1a1a1d;" id="login">Sign in</a>
+                        <a href="#" style="color: #1a1a1d;" id="signup">Sign up</a>
+                    </nav>
+                    <div class="modal_container" id="modal">
+                        <div class="modal">
+                            <a href="#" class="close" id="close">X</a>
+                            <span class="modal_heading">Enter Your Details</span>
+                            <form action="#" method="post">
+                                <input type="text" name="name" pattern="^[A-Za-z.\s_]+$" placeholder="Enter Your Name" required title="pattern does not match">
+                                <input type="text" name="mobile" pattern="[7-9]{1}[0-9]{9}" placeholder="Enter Your Mobile no." required title="pattern does not match">
+                                <input type="email" name="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" placeholder="Enter Your Email" required title="pattern does not match">
+                                <input type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter A Password" required title="Atleast -One Uppercase, One lowercase, One Number">
+                                <input type="submit" name="submit" value="Submit" class="btnRegister">
+                            </form>
+                            <a href="#" class="forgot">Forgot Password</a>
+                        </div>
+                    </div>
+                    <div class="modal_container" id="modallogin">
+                        <div class="modal">
+                            <a href="#" class="close" id="closeLog">X</a>
+                            <span class="modal_heading">Enter Your Details</span>
+                            <form action="#" method="post">
+                                <input type="email" name="customer_email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" placeholder="Enter Your Email" title="pattern does not match">
+                                <input type="password" name="customer_password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter A Password">
+                                <input type="submit" name="login" value="Submit" class="btnRegister" title="pattern does not match">
+                            </form>
+                            <a href="#" class="forgot">Forgot Password</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <div class="about-section">
+        <div class="inner-container">
+            <h1>About Us</h1>
+            <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit ducimus, enim inventore earum, eligendi nostrum pariatur necessitatibus eius dicta a voluptates sit deleniti autem error eos totam nisi neque voluptates sit deleniti autem error eos totam nisi neque.
+            </p>
+            <div class="skills">
+                <span>Web Design</span>
+                <span>Photoshop & Illustrator</span>
+                <span>Coding</span>
+            </div>
+        </div>
+    </div>
+    <footer style="border: #950740;  margin-left: 40px;">
+                <div class="some-class">
+                    <div class="bottom-logo">
+                        <a href="#">The Destination</a>
+                        <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
+                    </div>
+                    <div class="side-menu">
+                        <a href="#">About</a>
+                        <a href="">Enquiry/Request</a>
+                        <a href="">Contact</a>
+                        <a href="" style="color: #1a1a1d;">Login</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script type="text/javascript">
+    var btn = document.getElementById('login');
+    var modal = document.getElementById('modal');
+    var close = document.getElementById('close');
+    var login = document.getElementById('signup');
+    var log = document.getElementById('modallogin');
+    var closeLog = document.getElementById('closeLog');
+    
+    btn.addEventListener('click',openModal);
+    close.addEventListener('click',closeModal);
+    login.addEventListener('click', openLog);
+    closeLog.addEventListener('click',closeLg);
+    
+    function openModal()
+    {
+        modal.style.display = 'block';
+    }
+    
+    function closeModal()
+    {
+        modal.style.display = 'none';
+        history.back();
+    }
+    
+    function openLog()
+    {
+        log.style.display = 'block';
+    }
+    
+    function closeLg()
+    {
+        log.style.display = 'none';
+        history.back();
+    }
+</script>
+</body>
+</html>
